@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:img="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    <meta name="viewport" content="width=device-width,initial-scale=1">-->
+
+</head>
+<body>
+
+<div id="app">
+    <h2>{{res}}</h2>
+    <a v-bind:href="buf.url" v-bind:title="buf.title">{{buf.name}}</a>
+    <img :src="imgsrc" alt="">
+
+<!--    <h2 :class="{color:iscolor}" :style="{fontSize:}">v-bind的其他用法</h2>-->
+</div>
+
+<script src="vue.js"></script>
+<script>
+
+    new Vue({
+        el:"#app",
+        data:{
+            res:"hello",
+            buf:{
+                name:"百度",
+                url:"https://www.baidu.com",
+                title:"百度一下",
+            },
+        imgsrc: "1.jpeg",
+        iscolor:true,
+        }
+    })
+</script>
+
+</body>
+</html>

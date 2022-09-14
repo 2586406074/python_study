@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<div id="app">
+    <h2>{{res}}</h2>
+
+<!--    <h2>{{res_html}}</h2>-->
+    <h2 v-html="res_html"></h2>
+    <h2 v-text="res_html"></h2>
+
+<!--    {{}} 和v-text 的作用一样 ， 都是插入值，直接渲染，==> innerText-->
+
+<!--    v-html既能插入标签，又能插入值，==> innerHtml-->
+
+<!--    <h2 v-if="Math.random()>0.5">恭喜你中奖了</h2>-->
+    <h2 v-if="flag>0.5">王者</h2>
+    <h2 v-else-if="flag<=0.5">钻石</h2>
+    <h2 v-else>黄金</h2>
+
+    <h2 ></h2>
+</div>
+
+<script src="vue.js"></script>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            res:"hello",
+            res_html:'<p>hello_rose</p>',
+            flag: Math.random()
+        }
+    })
+</script>
+
+</body>
+</html>

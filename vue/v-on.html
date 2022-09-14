@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+
+    <h2>{{num}}</h2>
+<!--    <button v-on:click="num+=1">点我</button>-->
+    <button v-on:click="event_click">点我</button>
+
+    <div class="box" :class="{skin:Isskin"></div>
+    <button @click="changeskkin">换皮肤</button>
+</div>
+
+<script src="vue.js"></script>
+<script>
+    const vm= new Vue({
+        el:"#app",
+        data:{
+            num:1,
+        },
+        methods:{
+            event_click(){
+                this.num += 1
+            }
+        }
+
+    })
+</script>
+</body>
+</html>
